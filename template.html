@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect to "{name}"...</title>
-  <meta type="description" content="Redirecting to '{url}'...">
+  <meta type="description" content="Redirecting to '{url}'">
 </head>
 <body>
   <h1>Redirecting to "{name}"...</h1>
   <p>If you're not automatically redirected, press the button below to finish the redirect.</p>
   <a href="{url}">Redirect</a>
   <script type="text/javascript">
-    window.location.replace("{url}");
+    const params = new URLSearchParams(document.location.search);
+    let redirect = params.get("preview") !== "true";
+    if (redirect) window.location.replace("{url}");
   </script>
 </body>
 </html>
