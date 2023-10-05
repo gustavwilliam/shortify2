@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+:root {
+  --x-outer-margin: 20px;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+body {
+  padding: var(--x-outer-margin);
+  margin: 0;
+  overflow: visible;
+}
+
+h1, h2, h3 {
+  font-family: Young Serif, serif;
+  font-weight: 400;
+}
+
+a.button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-size: 16px;
+  border-bottom: 4px solid #2b6cb0;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+  margin-bottom: 5px;
+}
+
+a.button:hover {
+  background-color: #398bdc;
+}
+
+.redirect-box {
+  margin-top: 20px;
+  overflow-wrap: break-word;
+}
+
+.redirect-box > .url-block {
+  background-color: #f1f5f9;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0 0;
+  font-family: monospace;
+  font-weight: normal;
+}
+
+.redirect-box > a.button {
+  border-radius: 0 0 8px 8px;
+}
+
+@media (min-width: 640px) {
+  .template-box {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  a.button {
+    width: auto;
+  }
+
+  .redirect-box > a.button {
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .redirect-box > .url-block {
+    border-radius: 8px;
+  }
+
+  button {
+    width: auto;
+  }
+}
