@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from typing import NamedTuple
+import shutil
 
 import yaml
 from dotenv import load_dotenv
@@ -39,9 +40,15 @@ def create_link_page(link: Link):
         f.write(page)
 
 
+def add_public():
+    """Adds all files in /public to the build output directory."""
+    shutil.copytree("public", BUILD_OUTPUT, dirs_exist_ok=True)
+
+
 if __name__ == "__main__":
     Path(BUILD_OUTPUT).mkdir(parents=True, exist_ok=True)
     clear_build_output()
+    add_public()
 
     if CNAME is not None:
         with open(BUILD_OUTPUT / "CNAME", "w") as f:

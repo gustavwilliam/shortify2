@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect to "{name}"...</title>
   <meta type="description" content="Redirecting to '{url}'">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <h1>Redirecting to "{name}"...</h1>
-  <p>If you're not automatically redirected, press the button below to finish the redirect.</p>
-  <a href="{url}">Redirect</a>
+  <div class="template-box">
+    <div>
+      <h1>Redirecting...</h1>
+      <p>If you're not automatically redirected, press the button below to finish the redirect.</p>
+    </div>
+    <div class="redirect-box">
+      <div class="url-block">
+        {url}
+      </div>
+      <a href="{url}" class="button">Redirect</a>
+    </div>
+  </div>
   <script type="text/javascript">
     const params = new URLSearchParams(document.location.search);
     let redirect = params.get("preview") !== "true";
