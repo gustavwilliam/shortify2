@@ -6,6 +6,7 @@
   <title>Redirect to "{name}"...</title>
   <meta type="description" content="Redirecting to '{url}'">
   <link rel="stylesheet" href="main.css">
+  <meta http-equiv="refresh" content="0; url={url}">
 </head>
 <body>
   <div class="template-box">
@@ -20,10 +21,5 @@
       <a href="{url}" class="button">Open link</a>
     </div>
   </div>
-  <script type="text/javascript">
-    const params = new URLSearchParams(document.location.search);
-    let redirect = params.get("preview") !== "true";
-    if (redirect) window.location.replace("{url}");
-  </script>
 </body>
 </html>

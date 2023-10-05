@@ -8,13 +8,6 @@ Add a link to the shortener by adding it to `routes.yml`, committing and pushing
 
 See [Deploy](#deploy) for more details.
 
-## Preview link
-
-If you want to see where a link leads before redirecting, add `?preview=true` at the end of the link. For example, this is how you would preview the link leading to `python`:
-```
-https://s.godi.se/python?preview=true
-```
-
 ## Dev setup
 
 Clone the repo and cd into the directory. Then follow the steps below to set up a virtual environment and install the dependencies:
